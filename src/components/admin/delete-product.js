@@ -38,10 +38,10 @@ export default function DeleteProduct() {
             </div>
             <body className="body4">
                 <h4>You can delete any item here</h4>
-                <input className="Placeholder2" placeholder="Enter item name" ref={itemNameInput}></input>
-              
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter item name" ref={itemNameInput}></input>
+                <br></br>
                             
-                <Button variant="contained" onClick={deletingProduct}>Delete</Button>
+                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={deletingProduct}>Delete</Button>
             </body>    
             </center>
         </>
