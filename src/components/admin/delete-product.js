@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import axios from "axios";
+import { Button } from "@mui/material";
+import Logo from "../../Walmartlogo.jpg";
 
 
 export default function DeleteProduct() {
@@ -25,12 +27,22 @@ export default function DeleteProduct() {
     }
     return(
 
-        <> <center>
+        <>
+         <center>
+             <div class="header2">
+             <img src={Logo} alt="Logo"></img>
+            
+            <br></br>
+            
+            <h2> Hello FRITTTE Admin!. Welcome to your Dashboard</h2>
+            </div>
+            <body className="body4">
                 <h4>You can delete any item here</h4>
-                <input placeholder="Enter item name" ref={itemNameInput}></input>
+                <input className="Placeholder2" placeholder="Enter item name" ref={itemNameInput}></input>
               
                             
-                <button onClick={deletingProduct}>Delete</button>
+                <Button variant="contained" onClick={deletingProduct}>Delete</Button>
+            </body>    
             </center>
         </>
     );

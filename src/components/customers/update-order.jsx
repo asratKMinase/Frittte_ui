@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useContext, useRef } from "react";
 import { userContext } from "../../App";
+import { Button } from "@mui/material";
 
 export default function UpdateOrder() {
 
     const url = "https://frittte.azurewebsites.net";
 
-    const [user, setUser] = useContext(userContext);
+    const [user] = useContext(userContext);
 
     const idInput = useRef();
     const orderDateInput  = useRef();
@@ -50,16 +51,24 @@ export default function UpdateOrder() {
 
     return (
         <>
+                <div className="header">
                 <h4>Please Update your order below.</h4>
-                <input placeholder="Enter id" ref={idInput}></input>
-                <input placeholder="Enter order date" ref={orderDateInput}></input>
+                </div>
+                <center>
+                <br></br>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter id" ref={idInput}></input>
+                <br></br>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter order date" ref={orderDateInput}></input>
                 <br></br>
                 <br></br>
                 <br></br>
-                 <input placeholder="Enter item Name" ref={itemNameInput}></input>  
-                <input placeholder="Enter your comment" ref={commentInput}></input>
-
-                <button onClick={updateOrder}>Update Order</button> 
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter item Name" ref={itemNameInput}></input>
+                <br></br>  
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter your comment" ref={commentInput}></input>
+                <br></br>
+                <br></br>
+                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={updateOrder}>Update Order</Button> 
+                </center>
 
         </>
     );

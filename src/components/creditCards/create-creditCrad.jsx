@@ -1,19 +1,19 @@
 import axios from "axios";
 import { useContext, useRef } from "react";
 import { userContext } from "../../App";
+import { Button } from "@mui/material";
 
 export default function CrdeiteCardRegister() {
 
     const url = "https://frittte.azurewebsites.net";
 
-    const [user, setUser] = useContext(userContext);
+    const [user] = useContext(userContext);
 
     const creditCardInput = useRef();
     const creditCradNameInput  = useRef();
     const cvvInput = useRef();
     const expDateInput = useRef();
     const limitInput = useRef();
-    const usernameInput = useRef();
 
     async function register() {
     console.log(user.username)
@@ -43,23 +43,27 @@ export default function CrdeiteCardRegister() {
 
     return (
         <>
+                <div className="header">
                 <h4>Please register below.</h4>
-                <input type = "credit card" placeholder="Enter credit card number" ref={creditCardInput}></input>
-                <input placeholder="Enter name on the credit card number" ref={creditCradNameInput}></input>
+                </div>
+                <center>
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} type = "credit card" placeholder="Enter credit card number" ref={creditCardInput}></input>
                 <br></br>
                 <br></br>
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter name on the credit card number" ref={creditCradNameInput}></input>
                 <br></br>
-                <input placeholder="Enter CVV from the backend of the card" ref={cvvInput}></input>
-                <input placeholder="Enter expiration date" ref={expDateInput}></input>
+                <br></br>
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter CVV from the backend of the card" ref={cvvInput}></input>
+                <br></br>
+                <br></br>
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter expiration date" ref={expDateInput}></input>
                 <br></br>               
                 <br></br>
-                <br></br>
-                <input placeholder="Enter the limit on the card" ref={limitInput}></input>
-          
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter the limit on the card" ref={limitInput}></input>
                 <br></br>                   
                 <br></br>
-                <button onClick={register}>Add Credit Card</button> 
-
+                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={register}>Add Credit Card</Button> 
+                </center>
         </>
     );
 }

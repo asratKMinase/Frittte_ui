@@ -1,7 +1,7 @@
-import { Button } from "@mui/material";
+import { Button,ButtonGroup } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import Image from "./Frittte.jpg"
-import Logo from "./WalmartlogoResized.jpg";
+import Image from "./disco2.jpg"
+import Logo from "./Walmartlogo.jpg";
 
 export default function MainNavBar(){
     const navigate = useNavigate();
@@ -9,17 +9,24 @@ export default function MainNavBar(){
     return(
        
         <nav>
-           
-             <div class="header">
+             <div className="header">
+
              <img src={Logo} alt="Logo"></img>
             <h1>Welcome to FRITTTE</h1>
             </div>
-            <center>
-            <Button onClick={() => navigate("/login")}>Login</Button>
-            <Button onClick={() => navigate("/register")}>Sign Up</Button>
-            <Button onClick={() => navigate("/Food-Items")}>View all Food Items</Button>
+            <div className="headerPic">
             <img src={Image}></img>
-            </center>
+            </div>
+            <div className="mainBar">
+            
+             <center>
+            
+            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/login")}>Login</Button>
+            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}}onClick={() => navigate("/register")}>Sign Up</Button>
+            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/Food-Items")}>View all Food Items</Button>
+            
+            </center>  
+            </div>
         </nav>
     )
 }

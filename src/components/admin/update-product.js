@@ -1,6 +1,8 @@
 
 import axios from "axios";
 import { useRef, useState } from "react"
+import { Button } from "@mui/material";
+import Logo from "../../Walmartlogo.jpg";
     
 export default function UpdateProduct() {
     
@@ -37,21 +39,31 @@ export default function UpdateProduct() {
        
         return(
     
-            <>
+            <> <center>
+            <div class="header2">
+                 <img src={Logo} alt="Logo"></img>
+                
+                <br></br>
+                
+                <h2>Update your Product here</h2>
+                </div>
+                <body className="body4">
             <br></br>
             <br></br>
-            <input placeholder="Enter your item id" ref={idInput}></input>
-            <input placeholder="Enter your item name" ref={itemNameInput}></input>
-            <input placeholder="Enter your item cost" ref={costInput}></input>
+            <input className="Placeholder" placeholder="Enter your item id" ref={idInput}></input>
+            <input className="Placeholder" placeholder="Enter your item name" ref={itemNameInput}></input>
+            <input className="Placeholder" placeholder="Enter your item cost" ref={costInput}></input>
             <br></br>
             <br></br>
-            <input placeholder="Enter your item weight" ref={weightInput}></input>
-            <input placeholder="Enter your item volume" ref={volumeInput}></input>
-            <input placeholder="Is your item frozen" ref={frozenInput}></input>
+            <input className="Placeholder" placeholder="Enter your item weight" ref={weightInput}></input>
+            <input className="Placeholder" placeholder="Enter your item volume" ref={volumeInput}></input>
+            <input className="Placeholder" placeholder="Is your item frozen" ref={frozenInput}></input>
     
             <br></br>
             <br></br>
-            <button onClick={UpdateProduct}>Update</button>
+            <button variant="contained" onClick={UpdateProduct}>Update</button>
+            </body>
+        </center>
             </>
         );
        

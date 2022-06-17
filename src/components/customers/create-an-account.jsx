@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useRef } from "react";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function AccountRegister() {
   
 
-
+    const navigate = useNavigate();
   
 
     const url = "https://frittte.azurewebsites.net";
@@ -16,8 +18,6 @@ export default function AccountRegister() {
     const fnameInput = useRef();
     const lnameInput = useRef();
     const dobInput = useRef();
-    const employeeInput = useRef();
-    const adminInput = useRef();
   
     async function register() {
         
@@ -27,8 +27,8 @@ export default function AccountRegister() {
             fname: fnameInput.current.value,
             lname: lnameInput.current.value,
             dob: dobInput.current.value,
-            employee: employeeInput.current.value,
-            admin: adminInput.current.value,
+            employee: false,
+            admin: false,
              
     };
         try {
@@ -42,26 +42,31 @@ export default function AccountRegister() {
         }
     }
 
+    function toLogin(){
+        navigate("/login")
+    }
+
     return (
         <>
+                <div className="header">
                 <h4>Please register below.</h4>
-                <input placeholder="Enter your username" ref={usernameInput}></input>
-                <input type="password" placeholder="Enter Your Password" ref={passwordInput}></input>
+                </div>
+                <center>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter your username" ref={usernameInput}></input>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} type="password" placeholder="Enter Your Password" ref={passwordInput}></input>
                 <br></br>
                 <br></br>
                 <br></br>
-                <input placeholder="Enter First Name" ref={fnameInput}></input>
-                <input placeholder="Enter Last Name" ref={lnameInput}></input>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter First Name" ref={fnameInput}></input>
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter Last Name" ref={lnameInput}></input>
                 <br></br>               
                 <br></br>
                 <br></br>
-                <input placeholder="Enter your dob" ref={dobInput}></input>
-                <input placeholder="Enter your employee status" ref={employeeInput}></input>
-                <input placeholder="Enter Admin status" ref={adminInput}></input>
-
+                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter your dob" ref={dobInput}></input>
                 <br></br>                   
                 <br></br>
-                <button onClick={register}>Add Account</button>
+                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => {register(); toLogin()}}>Add Account</Button>
+                </center>
         </>
     );
 }

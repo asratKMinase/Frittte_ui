@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useContext, useRef } from "react";
 import { userContext } from "../../App";
+import { Button } from "@mui/material";
 
 export default function CrdeiteCardRegister() {
 
     const url = "https://frittte.azurewebsites.net";
 
-    const [user, setUser] = useContext(userContext);
+    const [user] = useContext(userContext);
 
     const creditCardInput = useRef()
 
@@ -43,21 +44,16 @@ export default function CrdeiteCardRegister() {
 
     return (
         <>
+                <div className="header">
                 <h4>You can delete your Credit Card here.</h4>
-                <input type = "credit card" placeholder="Enter credit card number" ref={creditCardInput}></input>
-                {/* <input placeholder="Enter name on the credit card number" ref={creditCradNameInput}></input>
+                </div>
                 <br></br>
-                <br></br>
-                <br></br>
-                <input placeholder="Enter CVV from the backend of the card" ref={cvvInput}></input>
-                <input placeholder="Enter expiration date" ref={expDateInput}></input>
-                <br></br>               
-                <br></br>
-                <br></br>
-                <input placeholder="Enter the limit on the card" ref={limitInput}></input> */}
+                <center>
+                <input TextField style ={{width: '15%' , borderWidth: 1 }} type = "credit card" placeholder="Enter credit card number" ref={creditCardInput}></input>
                 <br></br>                   
                 <br></br>
-                <button onClick={deleteCC}>Delete Credit Card</button> 
+                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={deleteCC}>Delete Credit Card</Button> 
+                </center>
 
         </>
     );
