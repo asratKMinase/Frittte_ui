@@ -89,6 +89,15 @@ export default function ViewAllFood() {
     function toLogin(){
         navigate("/login")
     }
+    console.log(user);
+
+    function toDash(){
+        if(user.username === "Guest"){
+            navigate("/")
+        }else{
+            navigate("/customerDashboard")
+        }
+    }
 
     const click = () => {setNum(randomNumberInRange(1,100000))}
 
@@ -101,12 +110,14 @@ export default function ViewAllFood() {
             <br></br>
            <center>
             <p4>Please Search for your favorite FoodItem...</p4>
+            <br></br>
+            <Button style={{borderRadius: 15, backgroundColor: "#FDBB2F", padding: "18px 36px",fontSize: "18px", color:"#0D7AB2"}} variant="contained" onClick={toDash}>Back</Button>
             </center>
             </div>
             <body className="body4">
             
             <br></br>
-            <input TextField className="p1" id="inputID"  style ={{width: '15%' , borderWidth: 10, borderColor:"grey", color:"black", background:"lightBlue"}} placeholder="Type a Food to Search for it" ref={itemInput}></input>
+            <input TextField className="p1" id="inputID"  style ={{width: '15%' , borderWidth: 10, borderColor:"grey", color:"black", background:"lightBlue", width: "400px"}} placeholder="Type a Food to Search for it" ref={itemInput}></input>
             <span></span>
             <span></span>
             <br></br>
@@ -120,7 +131,7 @@ export default function ViewAllFood() {
             <h3>Fat = {FAT}</h3>
             <h3>Fiber = {FIBTG}</h3>
             <h3>Protien = {PROCNT}</h3>
-            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
+            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue" ,width: "700px"}} placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
             <br></br>
             <br></br>
             <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} onClick={() => {click(); createOrder()}}>Add a comment</Button>

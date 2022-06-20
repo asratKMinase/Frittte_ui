@@ -40,7 +40,6 @@ export default function AccountRegister() {
          
         } catch (error) {
             console.error(error.response.data);
-            alert(error.response.data);
         }
     }
 

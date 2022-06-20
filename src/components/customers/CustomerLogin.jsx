@@ -56,7 +56,7 @@ export default function CustomerLogin(){
               <br></br>
                  <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}}  placeholder="Enter your Username" ref={usernameInput}></input>
               <br></br>
-                 <input TextField className="p1" id="inputID" type={'password'} style ={{width: '15%' , borderWidth: 10, borderColor:"gray", color:"black", background:"lightBlue"}}  placeholder="Enter your Password" ref={passwordInput}></input> 
+                 <input TextField className="p3" id="inputID" type={'password'} style ={{width: '15%' , borderWidth: 10, borderColor:"gray", color:"black", background:"lightBlue"}}  placeholder="Enter your Password" ref={passwordInput}></input> 
               <br></br>
               <br></br>
                <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={Login} >Login</Button>

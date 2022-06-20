@@ -24,7 +24,6 @@ export default function DeleteProduct() {
     console.log(response.data);
     } catch (error) {
     console.error(error.response.data);
-    alert(error.response.data);
     }
 
     }

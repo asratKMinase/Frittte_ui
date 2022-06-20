@@ -2,10 +2,14 @@ import axios from "axios";
 import { useRef, useContext } from "react";
 import { userContext } from "../../App";
 import { Button } from "@mui/material";
+import Logo from "../../Walmartlogo.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function UpdateOrder() {
 
     const [user] = useContext(userContext);
+
+    const navigate = useNavigate();
     
     
     const input1 = useRef();
@@ -33,27 +37,32 @@ export default function UpdateOrder() {
             
         } catch (error) {
             console.error(error);
-            alert(error.response.data);
         }
     }
 
     return (
         <>
             <div className="header">
+            <img src={Logo} alt="Logo"></img>
+            <center>
             <h4>Order an item</h4>
+            </center>
             </div>
             <center>
             <br></br>
-            <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Order Date" ref={input1}></input>
+            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Order Date" ref={input1}></input>
             <br></br>
             <br></br>
-            <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Item name" ref={input2}></input>
+            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Item name" ref={input2}></input>
             <br></br>
             <br></br>
-            <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Comment" ref={input3}></input>
+            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Comment" ref={input3}></input>
             <br></br>
             <br></br>
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={CreateOrder}>Order</Button>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={CreateOrder}>Order</Button>
+            <br></br>
+            <br></br>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/customerdashboard")}>Back</Button>
             </center>
 
  

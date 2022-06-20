@@ -18,7 +18,7 @@ export default function AdminNavBar() {
     return (
         <nav>
             <center>
-            <div class="header">
+            <div className="header">
              <img src={Logo} alt="Logo"></img>
             
             <br></br>
@@ -27,13 +27,15 @@ export default function AdminNavBar() {
             </center>
             </div>
             <body className="body4">
-            
-            <Button variant="contained" onClick={() => navigate("/addproduct")}>Add a Product</Button>
-            <Button variant="contained" onClick={() => navigate("/update-product")}>Update a Product</Button>
-            <Button variant="contained" onClick={() => navigate("/delete-product")}>Delete a Product</Button>
-            <Button variant="contained" onClick={LogOut}>Log Out</Button>
             <br></br>
-
+            <br></br>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }}  variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/addproduct")}>Add a Product</Button>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }}  variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/update-product")}>Update a Product</Button>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }}  variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/delete-product")}>Delete a Product</Button>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }}  variant="contained" sx={{color:'#FDBB2F'}} onClick={LogOut}>Log Out</Button>
+            <br></br>
+            <br></br>
+            <br></br>
             <img src={adminimage}></img>
             <br></br>
             </body>

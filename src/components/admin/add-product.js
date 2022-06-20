@@ -24,6 +24,7 @@ export default function AddProduct() {
 
 
     const [img, setImg] = useState();
+    const [showCreate, setCreate] = useState(false);
 
 
     async function getItem(){
@@ -64,7 +65,8 @@ export default function AddProduct() {
                 setFood(false);
             } else {
                 setFood()
-            }    
+            }
+            setCreate(!showCreate)    
         } catch (error){
             console.error(error);
         }
@@ -100,7 +102,7 @@ export default function AddProduct() {
 
         <br></br>
         <br></br>
-            <h8>{itemName}</h8>
+            <h3>{itemName}</h3>
             <img className="Placeholder2" src={img}></img>
             <h3>Cholesterol = {CHOCDF}</h3>
             <h3>Energy = {ENERC_KCAL}</h3>
@@ -110,6 +112,8 @@ export default function AddProduct() {
             <br></br>
         <br></br>
         <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={createProduct}>Create</Button>
+        <br></br>
+        {showCreate && <p>An item has been added to our Database</p>}
         <br></br>
         <br></br>
         <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained"  onClick={() => navigate("/admindashboard")}>Admin Dashboard</Button>

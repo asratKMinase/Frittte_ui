@@ -2,12 +2,16 @@ import axios from "axios";
 import { useContext, useRef } from "react";
 import { userContext } from "../../App";
 import { Button } from "@mui/material";
+import Logo from "../../Walmartlogo.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function UpdateOrder() {
 
     const url = "https://frittte.azurewebsites.net";
 
     const [user] = useContext(userContext);
+
+    const navigate = useNavigate();
 
     const idInput = useRef();
     const orderDateInput  = useRef();
@@ -45,29 +49,35 @@ export default function UpdateOrder() {
             
         } catch (error) {
             console.error(error);
-            alert(error.response.data);    
+   
         }
     }
 
     return (
         <>
                 <div className="header">
+                <img src={Logo} alt="Logo"></img>
+                <center>
                 <h4>Please Update your order below.</h4>
+                </center>
                 </div>
                 <center>
                 <br></br>
-                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter id" ref={idInput}></input>
+                <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Enter id" ref={idInput}></input>
                 <br></br>
-                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter order date" ref={orderDateInput}></input>
+                <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Enter order date" ref={orderDateInput}></input>
                 <br></br>
                 <br></br>
                 <br></br>
-                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter item Name" ref={itemNameInput}></input>
+                <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Enter item Name" ref={itemNameInput}></input>
                 <br></br>  
-                <input TextField style ={{width: '15%' , borderWidth: 1}} placeholder="Enter your comment" ref={commentInput}></input>
+                <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Enter your comment" ref={commentInput}></input>
                 <br></br>
                 <br></br>
-                <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={updateOrder}>Update Order</Button> 
+                <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={updateOrder}>Update Order</Button>
+                <br></br>
+                <br></br>
+                <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/customerdashboard")}>Back</Button> 
                 </center>
 
         </>
