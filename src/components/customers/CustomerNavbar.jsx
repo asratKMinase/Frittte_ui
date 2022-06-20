@@ -12,6 +12,7 @@ export default function CustomerNavBar(){
     
     const navigate = useNavigate();
 
+
     function LogOut(){
         user.username = "Guest";
         navigate("/")
@@ -56,7 +57,7 @@ export default function CustomerNavBar(){
             <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/creditcarddashboard")}>Credit Card</Button>
             </div>
             <div className="food">
-            <h2>Account Options</h2>
+            <h2>Food/Payment Options</h2>
             <br></br>
             <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/Food-Items")}>View Our Food Items</Button>
             <br></br>
