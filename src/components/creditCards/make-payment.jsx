@@ -52,6 +52,7 @@ export default function Payment() {
                 </div>
                 <br></br>
                 <center>
+                <body className="body4">
                 <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue" ,width: "400px"}} placeholder="Enter your credit card number" ref={creditCardInput}></input>
                 <br></br>
                 <br></br>
@@ -63,6 +64,7 @@ export default function Payment() {
                 <br></br>
                 <br></br>
                 <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/customerdashboard")}>Back</Button>
+                </body>
                 </center>
                
         </>

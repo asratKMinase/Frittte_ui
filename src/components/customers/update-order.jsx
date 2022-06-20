@@ -62,6 +62,7 @@ export default function UpdateOrder() {
                 </center>
                 </div>
                 <center>
+                <body className="body4">
                 <br></br>
                 <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Enter id" ref={idInput}></input>
                 <br></br>
@@ -78,6 +79,7 @@ export default function UpdateOrder() {
                 <br></br>
                 <br></br>
                 <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={() => navigate("/customerdashboard")}>Back</Button> 
+                </body>
                 </center>
 
         </>

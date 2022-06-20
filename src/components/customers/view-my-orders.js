@@ -57,6 +57,7 @@ export default function ViewMyOrders() {
             </center>
             </div>
             <center>
+            <body className="body4">
             <TableContainer component={Paper}>
             <Table >
                 <TableHead>
@@ -69,6 +70,7 @@ export default function ViewMyOrders() {
                 <tbody>{body}</tbody>
             </Table>
             </TableContainer>
+            </body>
             </center>
         </>
     )
