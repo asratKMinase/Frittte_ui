@@ -18,16 +18,16 @@ export default function AdminNavBar() {
     return (
         <nav>
             <center>
-            <div class="header2">
+            <div class="header">
              <img src={Logo} alt="Logo"></img>
             
             <br></br>
-            
-            <h2> Hello FRITTTE Admin!. Welcome to your Dashboard</h2>
+            <center>
+            <h3> Hello FRITTTE Admin!. Welcome to your Dashboard</h3>
+            </center>
             </div>
             <body className="body4">
             
-            <Button variant="contained"  onClick={() => navigate("/admindashboard")}>Admin Dashboard</Button>
             <Button variant="contained" onClick={() => navigate("/addproduct")}>Add a Product</Button>
             <Button variant="contained" onClick={() => navigate("/update-product")}>Update a Product</Button>
             <Button variant="contained" onClick={() => navigate("/delete-product")}>Delete a Product</Button>

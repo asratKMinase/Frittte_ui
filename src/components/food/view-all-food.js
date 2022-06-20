@@ -95,12 +95,13 @@ export default function ViewAllFood() {
     return (
         <>
         <center>
-        <div class="header2">
+        <div class="header">
              <img src={Logo} alt="Logo"></img>
             
             <br></br>
-           
-            <p4>Please Search for your favorite FoodItem</p4>
+           <center>
+            <p4>Please Search for your favorite FoodItem...</p4>
+            </center>
             </div>
             <body className="body4">
             
@@ -108,9 +109,9 @@ export default function ViewAllFood() {
             <input TextField className="p1" id="inputID"  style ={{width: '15%' , borderWidth: 10, borderColor:"grey", color:"black", background:"lightBlue"}} placeholder="Type a Food to Search for it" ref={itemInput}></input>
             <span></span>
             <span></span>
-            <br>
-        </br>
-            <Button  style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "8px 26px",fontSize: "18px" }} variant="contained" onClick={getItem}>Press to Find a Food item</Button>
+            <br></br>
+            <br></br>
+            <Button  style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={getItem}>Press to Find a Food item</Button>
             <br></br>
             <h3>{itemNameBody}</h3>
             <img className="Placeholder2" src={img}></img>
@@ -119,10 +120,12 @@ export default function ViewAllFood() {
             <h3>Fat = {FAT}</h3>
             <h3>Fiber = {FIBTG}</h3>
             <h3>Protien = {PROCNT}</h3>
-            <input className="Placeholder"  id="inputID" placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
-            <Button variant="contained" onClick={() => {click(); createOrder()}}>Add comment to order it right now</Button>
-            {showLog && <p className="Placeholder">To Order You need to Login. Press the Button Below to be taken to the Login Page</p> }
-            {showLog && <Button variant="contained" onClick={toLogin} >To Login</Button> }
+            <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
+            <br></br>
+            <br></br>
+            <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} onClick={() => {click(); createOrder()}}>Add a comment</Button>
+            {showLog && <p>To Order You need to Login. Press the Button Below to be taken to the Login Page</p> }
+            {showLog && <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} onClick={toLogin} >To Login</Button> }
             </body>
             </center>
            

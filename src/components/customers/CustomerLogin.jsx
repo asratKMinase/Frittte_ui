@@ -54,7 +54,7 @@ export default function CustomerLogin(){
            
             <body className="body4">
               <br></br>
-                 <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}} f  placeholder="Enter your Username" ref={usernameInput}></input>
+                 <input TextField className="p3" id="inputID" style ={{width: '15%' , borderWidth: 10, borderColor:"gray",color:"black", background:"lightBlue"}}  placeholder="Enter your Username" ref={usernameInput}></input>
               <br></br>
                  <input TextField className="p1" id="inputID" type={'password'} style ={{width: '15%' , borderWidth: 10, borderColor:"gray", color:"black", background:"lightBlue"}}  placeholder="Enter your Password" ref={passwordInput}></input> 
               <br></br>
