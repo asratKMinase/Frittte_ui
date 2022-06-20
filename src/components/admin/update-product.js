@@ -3,7 +3,6 @@ import axios from "axios";
 import { useRef, useState } from "react"
 import { Button } from "@mui/material";
 import Logo from "../../Walmartlogo.jpg";
-
     
 export default function UpdateProduct() {
     
@@ -51,18 +50,18 @@ export default function UpdateProduct() {
                 <body className="body4">
             <br></br>
             <br></br>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item id" ref={idInput}></input>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item name" ref={itemNameInput}></input>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item cost" ref={costInput}></input>
+            <input className="Placeholder" placeholder="Enter your item id" ref={idInput}></input>
+            <input className="Placeholder" placeholder="Enter your item name" ref={itemNameInput}></input>
+            <input className="Placeholder" placeholder="Enter your item cost" ref={costInput}></input>
             <br></br>
             <br></br>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item weight" ref={weightInput}></input>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item volume" ref={volumeInput}></input>
-            <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Is your item frozen" ref={frozenInput}></input>
+            <input className="Placeholder" placeholder="Enter your item weight" ref={weightInput}></input>
+            <input className="Placeholder" placeholder="Enter your item volume" ref={volumeInput}></input>
+            <input className="Placeholder" placeholder="Is your item frozen" ref={frozenInput}></input>
     
             <br></br>
             <br></br>
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={UpdateProduct}>Update</Button>
+            <button variant="contained" onClick={UpdateProduct}>Update</button>
             </body>
         </center>
             </>

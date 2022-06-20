@@ -27,11 +27,11 @@ export default function AdminNavBar() {
             </div>
             <body className="body4">
             
-    
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/addproduct")}>Add a Product</Button>
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/update-product")}>Update a Product</Button>
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={() => navigate("/delete-product")}>Delete a Product</Button>
-            <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={LogOut}>Log Out</Button>
+            <Button variant="contained"  onClick={() => navigate("/admindashboard")}>Admin Dashboard</Button>
+            <Button variant="contained" onClick={() => navigate("/addproduct")}>Add a Product</Button>
+            <Button variant="contained" onClick={() => navigate("/update-product")}>Update a Product</Button>
+            <Button variant="contained" onClick={() => navigate("/delete-product")}>Delete a Product</Button>
+            <Button variant="contained" onClick={LogOut}>Log Out</Button>
             <br></br>
 
             <img src={adminimage}></img>

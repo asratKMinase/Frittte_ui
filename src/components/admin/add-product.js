@@ -79,12 +79,20 @@ export default function AddProduct() {
             
             <h2>Find and Add your product</h2>
             </div>
-           
-        <input TextField style ={{width: '15%' , borderWidth: 1 }}  placeholder="Type a Food to Search for it" ref={itemInput}></input>
+            <body className="body4">
+        <input className="Placeholder"  placeholder="Type a Food to Search for it" ref={itemInput}></input>
+        <Button variant="contained"onClick={getItem}><h8>Press to Find a Food item</h8></Button>
         <br></br>
-        <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "10px 10px",fontSize: "10px" }} variant="contained" sx={{color:'#FDBB2F'}}onClick={getItem}>Press to Find a Food item</Button>
+        <br></br>
+
+        <input className="Placeholder" placeholder="Enter your item id" ref={idInput}></input>
+        <input className="Placeholder" placeholder="Enter your item cost" ref={costInput}></input>
+
         <br></br>
         <br></br>
+        <input className="Placeholder"  placeholder="Enter your item weight" ref={weightInput}></input>
+        <input className="Placeholder"  placeholder="Enter your item volume" ref={volumeInput}></input>
+        <input className="Placeholder"  placeholder="Is your item frozen" ref={frozenInput}></input>
 
         <br></br>
         <br></br>
@@ -97,18 +105,8 @@ export default function AddProduct() {
             <h3>Protien = {PROCNT}</h3>
             <br></br>
         <br></br>
-
-        <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item id" ref={idInput}></input>
-        <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Enter your item cost" ref={costInput}></input>
-
-        <br></br>
-        <br></br>
-        <input TextField style ={{width: '15%' , borderWidth: 1 }}  placeholder="Enter your item weight" ref={weightInput}></input>
-        <input TextField style ={{width: '15%' , borderWidth: 1 }}  placeholder="Enter your item volume" ref={volumeInput}></input>
-        <input TextField style ={{width: '15%' , borderWidth: 1 }} placeholder="Is your item frozen" ref={frozenInput}></input>
-        <br></br>
-        <Button style={{borderRadius: 35, backgroundColor: "#0D7AB2", padding: "10px 10px",fontSize: "10px" }} variant="contained" sx={{color:'#FDBB2F'}} onClick={createProduct}>Create</Button>
-        
+        <Button variant="contained" onClick={createProduct}><h8>Create</h8></Button>
+        </body>
         </center>
        
         </>

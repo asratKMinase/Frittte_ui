@@ -8,15 +8,13 @@
     letter-spacing: 0.5px;
   }
 
-  h2{
-    color: white
-  }
+  
   .header {
-    padding: 60px;
-    text-align: center;
+    padding: 40px;
+    text-align: justify;
     background: #0D7AB2;
     color: #FDBB2F;
-    font-size: 40px;
+    font-size: 50px;
   }
 
   .logOut{
@@ -63,11 +61,12 @@
 /* ===================================Headers Bar=================================================================== */
 
   .header2 {
-    padding: 20px;
+    padding: 35px;
     text-align: center;
     background: #0D7AB2;
     color: #1b1508;
-    font-size: 20px;
+    font-size: 30px;
+   
   }
   .header2 h1 {
     position: relative;
@@ -76,16 +75,16 @@
   }
   .header2 img {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: #555;
   }
 
-  h2 {
-    font-size: 2rem;
+  .h2 {
+    font-size: 1rem;
     letter-spacing: 0.9px;
     background: linear-gradient(
-      90deg,
+  
       #FDBB2F 69%,
       rgba(147, 76, 19, 0) 120%
 
@@ -105,21 +104,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 62,5%;
+    font-size: 62,22%;
   }
   .header img{
-    width: 100px;
+    width: 90px;
     float:left
   }
   .headerPic img{
     width: 100%;
-    height: 100%;
+    height: 70%;
   }
   
   .header h1 {
     position: relative;
-    top: 18px;
-    left: 10px;
+    top: 12px;
+    left: 14px;
   }
 
 /* ===================================Search Bar=================================================================== */
@@ -233,8 +232,10 @@ h8 {
 
 /* ====================================================================================================== */
 .body4 {
-  
-  background-color: white;
+  font-family: "Lucida Handwriting", monospace;
+  background-color: #FDBB2F;
+  width: 1920px;
+    height: 737px;
 }
 
   .wrapper {
@@ -318,4 +319,31 @@ h8 {
     margin-top: 20px;
   }
 
+/* ===================================== */
+.p4 {
+  font-family: "Times New Roman", Times, serif;
+ 
+  background-color: rgb(95, 129, 241);
+  color: #FDBB2F;
+  position: fixed;
+  
+}
+.p3 {
+  font-family: "Lucida Handwriting", monospace;
+  font-size: 1.3em; /* 40px/16=2.5em */
+}
+.p2 {
+  font-family: "Times New Roman", Times, serif;
+ 
+}
+.p1 {
+  font-family: "Lucida Handwriting", monospace;
+  font-size: 1.3em; /* 40px/16=2.5em */
+}
+/* =====================================place holder tag id  */
 
+
+#inputID::placeholder {
+    color: rgb(46, 46, 46);
+    opacity: 1;
+}

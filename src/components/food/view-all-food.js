@@ -4,8 +4,8 @@ import { useState, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../../App";
 import { Button } from "@mui/material";
-import Image from "../../Frittte.jpg"
 import Logo from "../../Walmartlogo.jpg";
+import { blue } from "@mui/material/colors";
 
 export default function ViewAllFood() {
     
@@ -99,14 +99,18 @@ export default function ViewAllFood() {
              <img src={Logo} alt="Logo"></img>
             
             <br></br>
-            
-            <h2>Here you can Search for your favorite FoodItem</h2>
+           
+            <p4>Please Search for your favorite FoodItem</p4>
             </div>
-            <body className="body2">
+            <body className="body4">
             
-
-            <input className="search" placeholder="Type a Food to Search for it" ref={itemInput}></input>
-            <Button variant="contained" onClick={getItem}>Press to Find a Food item</Button>
+            <br></br>
+            <input TextField className="p1" id="inputID"  style ={{width: '15%' , borderWidth: 10, borderColor:"grey", color:"black", background:"lightBlue"}} placeholder="Type a Food to Search for it" ref={itemInput}></input>
+            <span></span>
+            <span></span>
+            <br>
+        </br>
+            <Button  style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "8px 26px",fontSize: "18px" }} variant="contained" onClick={getItem}>Press to Find a Food item</Button>
             <br></br>
             <h3>{itemNameBody}</h3>
             <img className="Placeholder2" src={img}></img>
@@ -115,7 +119,7 @@ export default function ViewAllFood() {
             <h3>Fat = {FAT}</h3>
             <h3>Fiber = {FIBTG}</h3>
             <h3>Protien = {PROCNT}</h3>
-            <input className="Placeholder"  placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
+            <input className="Placeholder"  id="inputID" placeholder="Add a Comment if you would like to change anything" ref={input4}></input>
             <Button variant="contained" onClick={() => {click(); createOrder()}}>Add comment to order it right now</Button>
             {showLog && <p className="Placeholder">To Order You need to Login. Press the Button Below to be taken to the Login Page</p> }
             {showLog && <Button variant="contained" onClick={toLogin} >To Login</Button> }
