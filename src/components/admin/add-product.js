@@ -113,7 +113,7 @@ export default function AddProduct() {
         <br></br>
         <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained" onClick={createProduct}>Create</Button>
         <br></br>
-        {showCreate && <p>An item has been added to our Database</p>}
+        {showCreate && <h3>An item has been added to our database!</h3>}
         <br></br>
         <br></br>
         <Button style={{borderRadius: 15, backgroundColor: "#0D7AB2", padding: "18px 36px",fontSize: "18px", color:"#FDBB2F"}} variant="contained"  onClick={() => navigate("/admindashboard")}>Admin Dashboard</Button>
