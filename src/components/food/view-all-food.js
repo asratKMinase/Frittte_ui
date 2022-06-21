@@ -77,7 +77,6 @@ export default function ViewAllFood() {
                 console.log(response.data);
             } catch (error) {
                 console.error(error.response.data);
-                alert(error.response.data);
             }
         }
     }
